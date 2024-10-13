@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add video</title>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+	
+</style>
+</head>
+<body>
+	<form action="add-video" method="post">
+	<h1>Enter Video details:</h1>
+		<label>Video Name</label>
+		<input required type="text" name="videoName" placeholder="Enter Video Name">
+		<br><br>
+		<label>Video link</label>
+		<input required type="text" name="videoLink" placeholder="Paste Video link">
+		<br><br>
+		<label> Video Type</label>
+		<select required name="videoType">
+			<option value="Train">Train</option>
+			<option value="Bus">Bus</option>
+			<option value="Nature">Nature</option>
+		</select>
+		<br><br>
+		<label>Video Language</label>
+		<input  required type="text" name="videoLang" placeholder="Enter movie language">
+		<br><br>
+		<label>Traveller Name</label>
+		<input  required type="text" name="traveller" placeholder="Enter fdirector name">
+		<br><br>
+		<input type="submit" value="Add Vlog">
+	</form>
+</body>
+</html>

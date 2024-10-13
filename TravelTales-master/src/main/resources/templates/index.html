@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Landing page</title>
+<style>
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styles for the login container */
+.login {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+/* Styles for the headings */
+.login h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styles for the paragraphs */
+.login p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Styles for the input buttons */
+.login input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Add hover effect for input buttons */
+.login input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the links wrapping input buttons */
+.login a {
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+		<div class="login">
+		<h1>Welcome To TravelTales Application</h1>
+		<p>Don't have TravelTales account ? please register below.</p>
+		<a href="signup">
+			<input type="submit" value="REGISTER">
+		</a>
+		<br>
+		<p>Already have account ? login here.</p>
+		<a href="signin">
+			<input type="submit" value="LOGIN">
+		</a>
+	</div>
+</body>
+</html>

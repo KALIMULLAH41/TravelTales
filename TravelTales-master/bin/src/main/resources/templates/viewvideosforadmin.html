@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>All Travel Videos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Travel Videos:</h1>
+    <table border>
+        <tr>
+            <th>ID</th>
+            <th>Video Name</th>
+            <th>Video Link</th>
+            <th>Video Type</th>
+            <th>Video Language</th>
+            <th>Traveller Name</th>
+        </tr>
+        <tr th:each="videos : ${videos}">
+            <td th:text="${videos.id}"></td>
+            <td th:text="${videos.videoName}"></td>
+            <td th:utext="${videos.videoLink}"></td>
+            <td th:text="${videos.videoType}"></td>
+            <td th:text="${videos.videoLang}"></td>
+            <td th:text="${videos.traveller}"></td>
+        </tr>
+    </table>
+</body>
+</html>

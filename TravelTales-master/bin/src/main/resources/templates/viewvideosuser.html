@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="thhp://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All Videos</title>
+	<style>
+		.movie-grid {
+			display:grid;
+			grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+			gap:10px;
+		}
+		.movie-item {
+			text-align:center;
+			padding:10px;
+			border:2px solid darkcyan;
+			border-radius:10px;
+			margin-top:10px;
+		}
+		.movie-item iframe {
+			width:100%;
+			height:200px;
+		}
+		.all-movies{
+			background-color:green;
+			width:100%;
+			height:30px;
+			text-align:center;
+			border-radius:10px;
+			margin-top:0px;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+		<div class="all-movies"><h2>All Travel Videos</h2></div>
+		<div class="movie-grid">
+			<div th:each="videos : ${videos}" class="movie-item">
+				<h3 th:text="${videos.videoName}">Vlog Name</h3>
+				<div th:utext="${videos.videoLink}"></div>	
+			</div>	
+		</div>
+</body>
+</html>

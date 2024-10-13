@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin home</title>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#admin-home {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#admin-home h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#admin-home a {
+    text-decoration: none;
+}
+
+#admin-home input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#admin-home input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#admin-home a:not(:last-child) {
+    margin-bottom: 20px;
+}
+	
+</style>
+</head>
+	<body>
+		<div id="admin-home">
+		<h1>Welcome Admin:</h1>
+		<br>
+		<a href="view-followers">
+			<input type="submit" value="View Followers">
+		</a>
+		<br><br>
+		<a href="delete-follower">
+			<input type="submit" value="Delete Follower">
+		</a>
+		<br><br>
+		<a href="add-video">
+			<input type="submit" value="Add Travel Video">
+		</a>
+		<br><br>
+		<a href="delete-video">
+			<input type="submit" value="Delete Video">
+		</a>
+		<br><br>
+		<a href="view-videos">
+			<input type="submit" value="View Travel Videos">
+		</a>
+		<br><br>
+		<a href="admin-logout">
+			<input type="submit" value="LOGOUT">
+		</a>
+	</div>
+</body>
+</html>

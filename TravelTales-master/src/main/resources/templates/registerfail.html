@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register fail</title>
+<style>
+	body{
+	background-color:thistle;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-position:center;
+	padding-top:160px;
+}
+#registerfail{
+	background-color: orchid;
+	width:500px;
+	height:250px;
+	border-radius:15px;
+	text-align:center;
+	padding-bottom:20px;
+}
+#registerfail a input[type="submit"]{
+	background-color:blue;
+	border-radius:7px;
+	color:white;
+	height:33px;
+	border:none;
+}
+#registerfail h1{
+	font-family:none;
+}#registerfail a input[type="submit"]:hover{
+	background-color:orangered;
+	color:white;
+}
+</style>
+</head>
+<body>
+	<div id="registerfail">
+		<h1>Registration failed, entered email already exists with another user, enter new email and register again.</h1>
+		<a href="signup">
+			<input type="submit" value="Register Again">
+		</a>
+	</div>
+</body>
+</html>

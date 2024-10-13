@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<style>
+	body {
+    
+    background-color: thistle;
+    text-align: center;
+    margin: 50px;
+  }
+
+  form {
+    width: 300px;
+    margin: 0 auto;
+    background-color: orchid;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: calc(100% - 20px);
+    padding: 6px;
+    margin-bottom: 2px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  input[type="radio"] {
+    margin-right: 25px;
+  }
+
+  input[type="submit"] {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+
+  input[type="submit"]:hover {
+    background-color:orangered;
+    color:white;
+  }
+</style>
+<script>
+	function register(event)
+	{
+	    event.preventDefault();
+	    let form = document.getElementById('myform');
+	    let data = new FormData(form);
+	    let name = data.get('name');
+	    let valid = true;
+	    
+	    if(name != '')
+        {
+            if(name.length < 5)
+            {
+                alert('Too short - name should have a minimum of 5 characters');
+                valid = false;
+            }
+            if(name.length > 40)
+            {
+                alert('Too long - name should have a maximum of 40 characters');
+                valid = false;
+            }
+        }
+	    
+	    let email = data.get('email');
+	    
+	    if(email != '')
+	    {
+	    	if(!/[a-z]/.test(email))
+	    	{
+	    		alert('No lowercase characters found in email');
+	    		valid = false;
+	    	}
+	    	if(!/[@]/.test(email))
+	    	{
+	    		alert('@ special symbol not found');
+	    		valid = false;
+	    	}
+	    }
+	    
+	    let password = data.get('password');
+	    
+	    if(password != '')
+	    {
+	    	if(!/[a-z]/.test(password))
+	    	{
+	    		alert('No lowercase characters found in password');
+	    		valid = false;
+	    	}
+	    	if(!/[A-Z]/.test(password))
+	    	{
+	    		alert('No uppercase characters found in password');
+	    		valid = false;
+	    	}
+	    	if(!/[_@]/.test(password))
+	    	{
+	    		alert('Special symbols not found in password');
+	    		valid = false;
+	    	}
+	    	if(!/[0-9]/.test(password))
+	    	{
+	    		alert('No digits found in password');
+	    		valid = false;
+	    	}
+	    }
+	    
+	    let phonenumber = data.get('phone');
+	    
+	    if(phonenumber != '')
+	    {
+	    	if(/[a-zA-Z]/.test(phonenumber))
+	    	{
+	    		alert('Characters not allowed in Phone Number');
+	    		valid = false;
+	    	}
+	    	if(!/[0-9]/.test(phonenumber))
+	    	{
+	    		alert('Please enter digits');
+	    		valid = false;
+	    	}
+	    }
+	    if (valid) {
+	        form.submit();
+	    }
+	}
+</script>
+</head>
+<body>
+<div class="register">
+	<form id="myform" onsubmit="register(event)" action="register" method="post">
+		<h1>Enter your Details:</h1>
+		<label>Name</label>
+		<input type="text" name="name" placeholder="Enter name" required>
+		<br><br>
+		<label>Email</label>
+		<input type="email" name="email" placeholder="Enter email" required>
+		<br><br>
+		<label>Password</label>
+		<input type="password" name="password" placeholder="Enter password" required>
+		<br><br>
+		<label>Gender :</label>
+		Male<input type="radio" value="male" name="gender">
+		Female<input type="radio" value="female" name="gender">
+		Others<input type="radio" value="others" name="gender">
+		<br><br>
+		<label>Phone Number</label>
+		<input type="text" name="phone" required placeholder="Enter phone number">
+		<br><br>
+		<label>Address</label>
+		<textarea name="address" required></textarea>
+		<br><br>
+		<input type="submit" value="REGISTER">
+	</form>
+</div>
+</body>
+</html>
